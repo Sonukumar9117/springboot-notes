@@ -1,5 +1,6 @@
 package com.practice.demo;
 
+import com.practice.demo.service.EmployeeService;
 import com.practice.demo.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -10,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
 	@Autowired
-    private NotificationService notificationService;
+    private EmployeeService employeeService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
@@ -18,8 +19,7 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		notificationService.sendNotification();
-		System.out.println("Application is running fine ");
+		System.out.println(employeeService.getEmployeeById(1L));
 	}
 
 }

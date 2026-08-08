@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -24,5 +26,10 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public EmployeeDto getEmployeeById(Long id) {
         return null;
+    }
+
+    @Override
+    public List<EmployeeDto> geAll() {
+        return List.of();
     }
 }

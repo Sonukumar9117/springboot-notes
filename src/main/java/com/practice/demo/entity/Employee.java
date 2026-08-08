@@ -21,7 +21,7 @@ public class Employee {
     @Column(nullable = false)
     private String email;
     @Column(nullable = false)
-    private String age;
+    private Integer age;
     @CreationTimestamp
     private LocalDate dateOfJoining;
     private boolean isActive;
